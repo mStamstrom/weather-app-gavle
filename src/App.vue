@@ -1,28 +1,54 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Weather/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Weather from './components/Weather.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Weather
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  
+  --sun: #5bd3ff;
+  --clouds: #b3b3b3;
+  --rain: #575757;
+  --snow: #7e7e7e;
+  --night: rgb(4, 11, 49);
 }
+
+button {
+  border: 0;
+  outline: none !important;
+  background-color: inherit;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 </style>
